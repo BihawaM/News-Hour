@@ -67,19 +67,19 @@ def process_results(article_list):
 
     return article_results
 
-# def get_article_by_sources(id):
-#     get_sources_article_url = base_url.format(id,api_key)
+def get_article_by_sources(id):
+    get_sources_article_url = base_url.format(id,api_key)
     
     
-#     with urllib.request.urlopen(get_sources_article_url) as url:
-#         get_sources_article_data = url.read()
-#         get_sources_article_response = json.loads(get_sources_article_data)
+    with urllib.request.urlopen(get_sources_article_url) as url:
+        get_sources_article_data = url.read()
+        get_sources_article_response = json.loads(get_sources_article_data)
 
-#         sources_article_results = None
+        sources_article_results = None
 
-#         if get_sources_article_response['article']:
-#             sources_article_results_list = get_sources_article_response['article']
-#             sources_article_results = process_results(sources_article_results_list)
+        if get_sources_article_response['article']:
+            sources_article_results_list = get_sources_article_response['article']
+            sources_article_results = process_results(sources_article_results_list)
 
 
-#     return source_article_results
+    return source_article_results
