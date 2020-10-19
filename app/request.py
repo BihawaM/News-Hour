@@ -77,8 +77,8 @@ def get_article_by_sources(id):
 
         sources_article_results = None
 
-        if get_sources_article_response['article']:
-            sources_article_results_list = get_sources_article_response['article']
+        if get_sources_article_response['articles']:
+            sources_article_results_list = get_sources_article_response['articles']
             sources_article_results = process_results(sources_article_results_list)
 
 
