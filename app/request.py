@@ -23,23 +23,23 @@ def get_sources(sources):
             sources_results = process_results(sources_results_list)
 
 
-#     return sources_results
+    return sources_results
     
-# def get_article(article):
-#     get_article_url = base_url.format(article,api_key)
+def get_article(article):
+    get_article_url = base_url.format(article,api_key)
     
-#     with urllib.request.urlopen(get_article_url) as url:
-#         get_article_data = url.read()
-#         get_article_response = json.loads(get_article_data)
+    with urllib.request.urlopen(get_article_url) as url:
+        get_article_data = url.read()
+        get_article_response = json.loads(get_article_data)
 
-#         article_results = None
+        article_results = None
 
-#         if get_article_response['articles']:
-#             article_results_list = get_article_response['articles']
-#             article_results = process_results(article_results_list)
+        if get_article_response['articles']:
+            article_results_list = get_article_response['articles']
+            article_results = process_results(article_results_list)
 
 
-#     return article_results
+    return article_results
 
 # def process_results(article_list):
 #     '''
@@ -67,19 +67,19 @@ def get_sources(sources):
 
 #     return article_results
 
-# def get_article_by_source(id):
-#     get_source_articles_url = base_url.format(id,api_key)
+# def get_article_by_sources(id):
+#     get_sources_article_url = base_url.format(id,api_key)
     
     
-#     with urllib.request.urlopen(get_source_article_url) as url:
-#         get_source_article_data = url.read()
-#         get_source_article_response = json.loads(get_source_article_data)
+#     with urllib.request.urlopen(get_sources_article_url) as url:
+#         get_sources_article_data = url.read()
+#         get_sources_article_response = json.loads(get_sources_article_data)
 
-#         source_article_results = None
+#         sources_article_results = None
 
-#         if get_source_article_response['articles']:
-#             source_article_results_list = get_source_article_response['articles']
-#             source_article_results = process_results(source_article_results_list)
+#         if get_sources_article_response['article']:
+#             sources_article_results_list = get_sources_article_response['article']
+#             sources_article_results = process_results(sources_article_results_list)
 
 
 #     return source_article_results

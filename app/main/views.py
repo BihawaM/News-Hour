@@ -1,6 +1,6 @@
 from flask import render_template,request,redirect,url_for
 from . import main
-from ..request import get_sources,get_article,get_article_by_source
+from ..request import get_sources,get_article,get_article_by_sources
 
 
 @main.route('/')
@@ -16,18 +16,18 @@ def index():
         return render_template('index.html', technology = technology, trending = sources, politics = politics, sports = sports, beauty = beauty)
 
 
-@main.route('/articles', methods=["POST", "GET"])
-def articles_page():
+@main.route('/article', methods=["POST", "GET"])
+def article_page():
     if request.method == 'POST':
         search = request.form.get("search")
-        articles = requests.get_articles(search)
+        article = requests.get_article(search)
     else:
-        articles = requests.get_articles("tech")
-    return render_template('articles.html', articles=articles)
+        article = request.get_article("tech")
+    return render_template('articles.html', article=article)
 
 
 @main.route('/article/<id>')
-def source_article(id):
-    source_articles = requests.get_article_by_source(id)
-    source = id
-    return render_template('display.html', source_articles=source_articles, source=source)
+def sources_article(id):
+    sources_article = request.get_article_by_sources(id)
+    sources = id
+    return render_template('display.html', sources_article=sources_article, sources=sources)
