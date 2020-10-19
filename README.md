@@ -1,4 +1,4 @@
-<!-- # NEWS HOUR
+# NEWS HOUR
 
 ## AUTHOR
 ### [Bihawa](https://github.com/BihawaM)
@@ -11,4 +11,4 @@
 - As a user, I would want to click on an article and read the full article on the source website.
 
 ## License
-[MIT](https://github.com/BihawaM/Password-Locker/blob/master/LICENSE.md) -->
+[MIT](https://github.com/BihawaM/Password-Locker/blob/master/LICENSE.md)
