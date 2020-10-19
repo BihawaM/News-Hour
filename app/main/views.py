@@ -1,19 +1,19 @@
-# from flask import render_template,request,redirect,url_for
-# from . import main
-# from ..request import get_sources,get_article,get_article_by_source
+from flask import render_template,request,redirect,url_for
+from . import main
+from ..request import get_sources,get_article,get_article_by_source
 
 
-# @main.route('/')
-# def index():
-#     sources = get_sources('trending')
-#     technology = get_sources('technology')
-#     politics = get_sources('politics')
-#     sports = get_sources('sports')
-#     beauty = get_sources('beauty')
+@main.route('/')
+def index():
+    sources = get_sources('trending')
+    technology = get_sources('technology')
+    politics = get_sources('politics')
+    sports = get_sources('sports')
+    beauty = get_sources('beauty')
     
-#     # sources = request.args.get_sources('popularity')
-#     if sources:
-#         return render_template('index.html', technology = technology, trending = sources, politics = politics, sports = sports, beauty = beauty)
+    # sources = request.args.get_sources('popularity')
+    if sources:
+        return render_template('index.html', technology = technology, trending = sources, politics = politics, sports = sports, beauty = beauty)
 
 
 
