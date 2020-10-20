@@ -23,7 +23,7 @@ def article_page():
         article = requests.get_article(search)
     else:
         article = request.get_article("tech")
-    return render_template('articles.html', article=article)
+    return render_template('article.html', article=article)
 
 
 @main.route('/article/<id>')
@@ -31,3 +31,5 @@ def sources_article(id):
     sources_article = request.get_article_by_sources(id)
     sources = id
     return render_template('display.html', sources_article=sources_article, sources=sources)
+
+

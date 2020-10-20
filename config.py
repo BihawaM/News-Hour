@@ -5,8 +5,6 @@ class Config:
     General configuration parent class
     '''
     NEWS_API_KEY = '5136884436074293b9fd97e1a6c1032d'
-    # news_sources_url ='https://newsapi.org/v2/sources?&apiKey={}'
-    # articles_url = 'https://newsapi.org/v2/everything?language=en&sources={}&apiKey={}'
     NEWS_API_BASE_URL = 'http://newsapi.org/v2/everything?q={}&apiKey={}'
     SECRET_KEY = 'Bih20'
     

@@ -82,4 +82,5 @@ def get_article_by_sources(id):
             sources_article_results = process_results(sources_article_results_list)
 
 
-    return source_article_results
+    return sources0_article_results
+
